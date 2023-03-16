@@ -66,7 +66,7 @@ class Graph:
 #
 # print(count)
 
-data = [[0 for i in range(6)] for j in range(5279)]
+data = [[0 for i in range(6)] for j in range(5279)] # j range must be updated specifically for the file being used
 print(shape(data))
 
 with open('subProfile2b.txt') as f:
@@ -131,6 +131,6 @@ for jj in range(len(data)):
 print("cccc", cccc)
 
 print(scaled_minmax)
-savemat('data750_full.mat',
+savemat('data.mat',
         {'label': label_list, 'OriginalData': data, 'Scaled_Standardization': scaled_dt,
          'Scaled_Min_Max': scaled_minmax})
